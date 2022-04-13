@@ -1,0 +1,14 @@
+http://127.0.0.1:8000/api/product-list/
+http://127.0.0.1:8000/api/product-detail
+http://127.0.0.1:8000/api/product-create
+http://127.0.0.1:8000/api/product-update/id/
+http://127.0.0.1:8000/api/product-delete/id
+
+
+USERS APP
+in href put ={% url 'profile' %},{% url 'logout' %},{% url 'register' %},{% url 'login' %}
+
+in register
+{% url 'login' %}
+
+kale: password is kale@gmail

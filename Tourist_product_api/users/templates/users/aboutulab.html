@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    {% extends 'users/base.html' %}
+    {% load static %}
+    {% block content %}
+
+<body>
+<!-- About Start -->
+<div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-lg-7">
+                <div class="section-title position-relative pb-3 mb-5">
+                    <h5 class="fw-bold text-primary text-uppercase">About Us</h5>
+                    <h1 class="mb-0">East African Community (EAC)</h1>
+                </div>
+                <p class="mb-4">The regional intergovernmental organisation founded in 1967. The work of the EAC is guided by its Treaty (2000) which established the Community. </p>
+               <br><br><br>
+                <div class="d-flex align-items-center mb-4 wow fadeIn" data-wow-delay="0.6s">
+                    <div class="bg-primary d-flex align-items-center justify-content-center rounded" style="width: 60px; height: 60px;">
+                        <i class="fa fa-phone-alt text-white"></i>
+                    </div>
+                    <div class="ps-4">
+                        <h5 class="mb-2">Call to ask any question</h5>
+                        <h4 class="text-primary mb-0">+250788558866</h4>
+                    </div>
+                </div>
+                <a href="{% url 'feedback'%}" class="btn btn-primary py-3 px-5 mt-3 wow zoomIn" data-wow-delay="0.9s">Any Request</a>
+            </div>
+            <div class="col-lg-5" style="min-height: 500px;">
+                <div class="position-relative h-100">
+                    <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.9s" src="data:image/jpeg;base64,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" style="object-fit: cover;">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+
+    <div class="container">
+      <div class="mySlides">
+        <div class="numbertext">1 / 6</div>
+          <img src="https://i.ytimg.com/vi/6qhm_Re-cQ8/maxresdefault.jpg"  style="width:100%; height:400px; object-fit:fill;">
+      </div>
+    
+      <div class="mySlides">
+        <div class="numbertext">2 / 6</div>
+          <img src="https://i.ytimg.com/vi/YBaQWxbKNDI/maxresdefault.jpg"  style="width:100%; height:400px; object-fit:fill;">
+      </div>
+    
+      <div class="mySlides">
+        <div class="numbertext">3 / 6</div>
+          <img src="https://i.ytimg.com/vi/rVASPvM3SXs/maxresdefault.jpg" style="width:100%; height:400px; object-fit:fill;">
+      </div>
+    
+      <div class="mySlides">
+        <div class="numbertext">4 / 6</div>
+          <img src="https://i.ytimg.com/vi/44Wrd5uXgl8/maxresdefault.jpg" style="width:100%; height:400px; object-fit:fill;">
+      </div>
+    
+      <div class="mySlides">
+        <div class="numbertext">5 / 6</div>
+          <img src="https://i.ytimg.com/vi/vyqHC0L6MtI/mqdefault.jpg" style="width:100%; height:400px; object-fit:fill;">
+      </div>
+    
+      <div class="mySlides">
+        <div class="numbertext">6 / 6</div>
+          <img src="https://sonnietravel.com/wp-content/uploads/2022/02/10-Best-Places-to-Visit-in-South-Sudan-Travel.jpg" style="width:100%; height:400px; object-fit:fill;">
+      </div>
+    
+      <!-- Next and previous buttons -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    
+      <!-- Image text -->
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+    
+      <!-- Thumbnail images -->
+      <div class="row">
+        <div class="column">
+          <img class="demo cursor" src="https://i.ytimg.com/vi/6qhm_Re-cQ8/maxresdefault.jpg" class="slide-image" style="width:100% ;height:100px" onclick="currentSlide(1)" alt="RWANDA">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="https://i.ytimg.com/vi/YBaQWxbKNDI/maxresdefault.jpg" class="slide-image" style="width:100% ;height:100px" onclick="currentSlide(2)" alt="UGANDA">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="https://i.ytimg.com/vi/rVASPvM3SXs/maxresdefault.jpg" class="slide-image" style="width:100% ;height:100px" onclick="currentSlide(3)" alt="BURUNDI">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="https://i.ytimg.com/vi/44Wrd5uXgl8/maxresdefault.jpg" class="slide-image"  style="width:100% ;height:100px" onclick="currentSlide(4)" alt="DRC">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="https://i.ytimg.com/vi/vyqHC0L6MtI/mqdefault.jpg" class="slide-image" style="width:100% ;height:100px" onclick="currentSlide(5)" alt="TANZANIA">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="https://sonnietravel.com/wp-content/uploads/2022/02/10-Best-Places-to-Visit-in-South-Sudan-Travel.jpg" class="slide-image" style="width:100% ;height:100px" onclick="currentSlide(6)" alt="SOUTHSUDAN">
+        </div>
+      </div>
+    </div>
+    
+    <!-- photo -->
+    
+        <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="container py-5">
+                <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+                    <h5 class="fw-bold text-primary text-uppercase">Our Community Countries</h5>
+                    <h1 class="mb-0">Umoja Wetu </h1>
+                </div>
+                <div class="row g-0">
+                    <div class="col-lg-4 wow slideInUp" data-wow-delay="0.6s">
+                        <div class="bg-light rounded">
+                            <div class="border-bottom py-4 px-5 mb-4">
+                                <h4 class="text-primary mb-1">RWANDA</h4>
+                                <small class="text-uppercase">Let Golden Rwanda Plan A Magical Trip for You to Track the Mountain Gorillas. Book Today. Book the Most Unique Mountain Gorilla Tracking Tours with Golden Rwanda Safaris Today. Chimp Trekking Safaris. Happy Clients. East Africa Specialists. Expert Guides.</small>
+                            </div>
+                            <div class="p-5 pt-0">
+                                <h1 class="display-5 mb-3">
+                                   <img src="https://i.ytimg.com/vi/6qhm_Re-cQ8/maxresdefault.jpg" alt="" style="height: 25;">
+                                </h1>
+                                
+                                <a href="" class="btn btn-primary py-2 px-4 mt-4">Continue with RWANDA</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 wow slideInUp" data-wow-delay="0.3s">
+                        <div class="bg-white rounded shadow position-relative" style="z-index: 1;">
+                            <div class="border-bottom py-4 px-5 mb-4">
+                                <h4 class="text-primary mb-1">UGANDA</h4>
+                                <small class="text-uppercase">Uganda is one of the most beautiful countries in Africa. With its dense misty forests, snow-peaked mountains, glassy lakes and sprawling savannas, it’s no wonder Winston Churchill dubbed this wonderful country the ‘pearl of Africa’.</small>
+                            </div>
+                            <div class="p-5 pt-0">
+                                <h1 class="display-5 mb-3">
+                                    <img src="/img/images/EAC/UgandaPic/220px-KampalaRd_Uganda_house_Kampala.jpeg" alt="">
+                                </h1>
+                               <a href="" class="btn btn-primary py-2 px-4 mt-4">Continue with UGANDA</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 wow slideInUp" data-wow-delay="0.9s">
+                        <div class="bg-light rounded">
+                            <div class="border-bottom py-4 px-5 mb-4">
+                                <h4 class="text-primary mb-1">BURUNDI</h4>
+                                <small class="text-uppercase">Ecotourism is one of the most important tourist areas in Burundi. Tourism infrastructure in Burundi is very weak. Transportation and accommodation options for tourists are limited. In 2010, the Burundi government planned a 20-year infrastructure development.</small>
+                            </div>
+                            <div class="p-5 pt-0">
+                                <h1 class="display-5 mb-3">
+                                    <img src="/img/images/EAC/Burundi/download (1).jpeg" alt="">
+                                </h1>
+                                <a href="" class="btn btn-primary py-2 px-4 mt-4">Continue with BURUNDI</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Pricing Plan End -->
+    
+    
+        <!-- Quote Start -->
+        <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s" id="contact">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-lg-7">
+                        <div class="section-title position-relative pb-3 mb-5">
+                            <h5 class="fw-bold text-primary text-uppercase">Request A Book your space now</h5>
+                            <h1 class="mb-0">Please Feel Free to Contact Us</h1>
+                        </div>
+                        <div class="row gx-3">
+                            <div class="col-sm-6 wow zoomIn" data-wow-delay="0.2s">
+                                <h5 class="mb-4"><i class="fa fa-reply text-primary me-3"></i>Reply within 24 hours</h5>
+                            </div>
+                            <div class="col-sm-6 wow zoomIn" data-wow-delay="0.4s">
+                                <h5 class="mb-4"><i class="fa fa-phone-alt text-primary me-3"></i>24 hrs telephone support</h5>
+                            </div>
+                        </div>
+                        <p class="mb-4"></p>
+                        <div class="d-flex align-items-center mt-2 wow zoomIn" data-wow-delay="0.6s">
+                            <div class="bg-primary d-flex align-items-center justify-content-center rounded" style="width: 60px; height: 60px;">
+                                <i class="fa fa-phone-alt text-white"></i>
+                            </div>
+                            <div class="ps-4">
+                                <h5 class="mb-2">Call to ask any question</h5>
+                                <h4 class="text-primary mb-0">+250788558866</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="bg-primary rounded h-100 d-flex align-items-center p-5 wow zoomIn" data-wow-delay="0.9s">
+                            <form>
+                                <div class="row g-3">
+                                    <div class="col-xl-12">
+                                        <input type="text" class="form-control bg-light border-0" placeholder="Your Name" style="height: 55px;">
+                                    </div>
+                                    <div class="col-12">
+                                        <input type="email" class="form-control bg-light border-0" placeholder="Your Email" style="height: 55px;">
+                                    </div>
+                                    <div class="col-12">
+                                        <select class="form-select bg-light border-0" style="height: 55px;">
+                                            <option selected>Select A Service</option>
+                                            <option value="1">Visiter</option>
+                                            <option value="2">Business</option>
+                                            <option value="3">Sponser</option>
+                                            <option value="3">Member</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12">
+                                        <textarea class="form-control bg-light border-0" rows="3" placeholder="Message"></textarea>
+                                    </div>
+                                    <div class="col-12">
+                                        <button class="btn btn-dark w-100 py-3" type="submit">Any Request</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Quote End -->
+    
+<!--     
+       
+        <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="container py-5">
+                <div class="section-title text-center position-relative pb-3 mb-4 mx-auto" style="max-width: 600px;">
+                    <h5 class="fw-bold text-primary text-uppercase">Trust</h5>
+                    <h1 class="mb-0">What Our Clients Say About Our Digital Services</h1>
+                </div>
+                <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="testimonial-item bg-light my-4">
+                        <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
+                            <img class="img-fluid rounded" src="https://pbs.twimg.com/profile_images/1259853544213164033/jP8CK0jA_400x400.jpg" style="width: 60px; height: 60px;" >
+                            <div class="ps-4">
+                                <h4 class="text-primary mb-1">{{user.username}}</h4>
+                                <small class="text-uppercase">{{user.email}}</small>
+                            </div>
+                        </div>
+                        <div class="pt-4 pb-5 px-5">
+                            Trust the Process
+                        </div>
+                    </div>
+                    <div class="testimonial-item bg-light my-4">
+                        <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
+                            <img class="img-fluid rounded" src="https://pbs.twimg.com/profile_images/1259853544213164033/jP8CK0jA_400x400.jpg" style="width: 60px; height: 60px;" >
+                            <div class="ps-4">
+                                <h4 class="text-primary mb-1">Ihirwe Jean Flicien</h4>
+                                <small class="text-uppercase">Engineer</small>
+                            </div>
+                        </div>
+                        <div class="pt-4 pb-5 px-5">
+                            Good job guy's
+                        </div>
+                    </div>
+                    <div class="testimonial-item bg-light my-4">
+                        <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
+                            <img class="img-fluid rounded" src="https://pbs.twimg.com/profile_images/1259853544213164033/jP8CK0jA_400x400.jpg" style="width: 60px; height: 60px;" >
+                            <div class="ps-4">
+                                <h4 class="text-primary mb-1">John</h4>
+                                <small class="text-uppercase">Profession</small>
+                            </div>
+                        </div>
+                        <div class="pt-4 pb-5 px-5">
+                            keep working guy's
+                            </div>
+                    </div>
+                    <div class="testimonial-item bg-light my-4">
+                        <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
+                            <img class="img-fluid rounded" src="https://pbs.twimg.com/profile_images/1259853544213164033/jP8CK0jA_400x400.jpg" style="width: 60px; height: 60px;" >
+                            <div class="ps-4">
+                                <h4 class="text-primary mb-1">kikandi</h4>
+                                <small class="text-uppercase">Software Developer</small>
+                            </div>
+                        </div>
+                        <div class="pt-4 pb-5 px-5">
+                            Asante sana Kijana.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+     -->
+    
+        <!-- Team Start -->
+        <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="container py-5">
+                <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+                    <h5 class="fw-bold text-primary text-uppercase">Team Members</h5>
+                    <h1 class="mb-0">Professional Stuffs Ready to Help Your for any questions</h1>
+                </div>
+                <div class="row g-5">
+                    <div class="col-lg-4 wow slideInUp" data-wow-delay="0.3s">
+                        <div class="team-item bg-light rounded overflow-hidden">
+                            <div class="team-img position-relative overflow-hidden">
+                                <img class="img-fluid w-100" src="https://pbs.twimg.com/profile_images/1259853544213164033/jP8CK0jA_400x400.jpg" alt="">
+                                <div class="team-social">
+                                    <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-twitter fw-normal"></i></a>
+                                    <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
+                                    <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-instagram fw-normal"></i></a>
+                                    <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-linkedin-in fw-normal"></i></a>
+                                </div>
+                            </div>
+                            <div class="text-center py-4">
+                                <h4 class="text-primary">Ihame Gilbert</h4>
+                                <p class="text-uppercase m-0">Owner</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 wow slideInUp" data-wow-delay="0.6s">
+                        <div class="team-item bg-light rounded overflow-hidden">
+                            <div class="team-img position-relative overflow-hidden">
+                                <img class="img-fluid w-100" src="https://pbs.twimg.com/profile_images/1176246083007201283/S6XZQuE1_400x400.jpg" alt="">
+                                <div class="team-social">
+                                    <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-twitter fw-normal"></i></a>
+                                    <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
+                                    <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-instagram fw-normal"></i></a>
+                                    <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-linkedin-in fw-normal"></i></a>
+                                </div>
+                            </div>
+                            <div class="text-center py-4">
+                                <h4 class="text-primary">Iranzi Aimable</h4>
+                                <p class="text-uppercase m-0">Developer</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 wow slideInUp" data-wow-delay="0.9s">
+                        <div class="team-item bg-light rounded overflow-hidden">
+                            <div class="team-img position-relative overflow-hidden">
+                                <img class="img-fluid w-100" src="data:image/jpeg;base64,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" alt="">
+                                <div class="team-social">
+                                    <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-twitter fw-normal"></i></a>
+                                    <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
+                                    <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-instagram fw-normal"></i></a>
+                                    <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-linkedin-in fw-normal"></i></a>
+                                </div>
+                            </div>
+                            <div class="text-center py-4">
+                                <h4 class="text-primary">Bosco</h4>
+                                <p class="text-uppercase m-0">Analyste</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Team End -->
+    
+    
+        <!-- Blog Start -->
+        <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="container py-5">
+                <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+                    <h5 class="fw-bold text-primary text-uppercase">Online Tools & Services</h5>
+                    <h1 class="mb-0">Read The Latest activity from Our EAC Post</h1>
+                </div>
+                <div class="row g-5">
+                    <div class="col-lg-4 wow slideInUp" data-wow-delay="0.3s">
+                        <div class="blog-item bg-light rounded overflow-hidden">
+                            <div class="blog-img position-relative overflow-hidden">
+                                <img class="img-fluid" src="https://www.eac.int/images/Adverts/Trade_Help_desk.png" alt="">
+                                <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="">EAC Trade Information Portal</a>
+                            </div>
+                            <div class="p-4">
+                                <div class="d-flex mb-3">
+                                    <small class="me-3"><i class="far fa-user text-primary me-2"></i>John Doe</small>
+                                    <small><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan, 2045</small>
+                                </div>
+                                <h4 class="mb-3">EAC Trade Information Portal</h4>
+                                <p>The EAC Trade Information Portal (TIP) gives access to step-by-step guides on licenses, pre-clearance permits and clearance formalities for the most traded goods within, to and from the East African Community EAC).</p>
+                                <a class="text-uppercase" href="http://tradehelpdesk.eac.int/">Read More <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 wow slideInUp" data-wow-delay="0.6s">
+                        <div class="blog-item bg-light rounded overflow-hidden">
+                            <div class="blog-img position-relative overflow-hidden">
+                                <img class="img-fluid" src="https://www.eac.int/images/images/EAC_Health_Portal_1.png" alt="">
+                                <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="">EAC Health Portal</a>
+                            </div>
+                            <div class="p-4">
+                                <div class="d-flex mb-3">
+                                    <small class="me-3"><i class="far fa-user text-primary me-2"></i>John Doe</small>
+                                    <small><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan, 2045</small>
+                                </div>
+                                <h4 class="mb-3">EAC Health Portal</h4>
+                                <p>The EAC Health Portal is the official comprehensive compendium of health information in East Africa. A dynamic, structured, and interactive single-point-of-access of health information in the region.</p>
+                                <a class="text-uppercase" href="https://www.eahealth.org/">Read More <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 wow slideInUp" data-wow-delay="0.9s">
+                        <div class="blog-item bg-light rounded overflow-hidden">
+                            <div class="blog-img position-relative overflow-hidden">
+                                <img class="img-fluid" src="https://www.eac.int/images/images/50MAWS1.png" alt="">
+                                <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="">50 Million African Women Speak</a>
+                            </div>
+                            <div class="p-4">
+                                <div class="d-flex mb-3">
+                                    <small class="me-3"><i class="far fa-user text-primary me-2"></i>John Doe</small>
+                                    <small><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan, 2045</small>
+                                </div>
+                                <h4 class="mb-3">50 Million African Women Speak</h4>
+                                <p>50 Million African Women Speak is a digital platform which is available via web and as a mobile App. The platform is designed as a one-stop shop for the information needs of African women in business.</p>
+                                <a class="text-uppercase" href="http://www.womenconnect.org/">Read More <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Blog Start -->
+    
+</body>
+{% endblock content %}

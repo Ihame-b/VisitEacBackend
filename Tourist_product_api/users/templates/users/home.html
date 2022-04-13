@@ -1,0 +1,122 @@
+
+{% extends 'users/base.html' %}
+{% load static %}
+{% block content %}
+    <link rel="stylesheet" href="{% static 'css/main.css'%}">
+    <div class="container">
+      <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="w-100" src="https://www.eacj.org/wp-content/uploads/2020/04/eac-flag-3.jpg" alt="Image">
+                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                    <div class="p-3" style="max-width: 900px;">
+                        <br><br>
+                        <h5 class="text-white text-uppercase mb-3 animated slideInDown">AFRICA</h5>
+                        <h1 class="display-1 text-white mb-md-4 animated zoomIn">VISITY EAST AFRICAN COMMUNITY</h1>
+                        <a href="{% url 'create_product' %}" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">Publish your Tourist Area</a>
+                        <a href="{% url 'feedback'%}" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">Feedback from visiter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="w-100" src="https://africanarguments.org/wp-content/uploads/2021/04/eac-human-rights.jpg" alt="Image">
+                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                    <div class="p-3" style="max-width: 900px;">
+                        <h5 class="text-white text-uppercase mb-3 animated slideInDown">AFRICA</h5>
+                        <h1 class="display-1 text-white mb-md-4 animated zoomIn">VISITY EAST AFRICAN COMMUNITY</h1>
+                        <a href="{% url 'create_product' %}" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">Publish your Tourist Area</a>
+                        <a href="{% url 'feedback'%}" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">Feedback from visiter</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#header-carousel"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+<!-- Navbar & Carousel End -->
+
+
+<!-- Full Screen Search Start -->
+<div class="modal fade" id="searchModal" tabindex="-1">
+    <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content" style="background: rgba(9, 30, 62, .7);">
+            <div class="modal-header border-0">
+                <button type="button" class="btn bg-white btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-flex align-items-center justify-content-center">
+                <div class="input-group" style="max-width: 600px;">
+                    <input type="text" class="form-control bg-transparent border-primary p-3" placeholder="Type search keyword">
+                    <button class="btn btn-primary px-4"><i class="bi bi-search"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h1 style="color: black;">Available Tourist </h1>
+<div class=" container">
+    <div class="search-box">
+        <i class="bx bx-search"></i>
+        <input type="text" placeholder="Search a movie">
+    </div>
+
+    <h1 style="color: black;">Available VOLCANOES </h1>
+    {% for pro in product %}
+    {% if pro.category == "VORCANOES"%}
+                <img style="height: 200px; width: 150px;" src="{{ pro.image.url }}" alt="">
+                <h6>{{pro}}</h6> 
+                <h1 style="color: black; ">{{pro.category}}</h1>
+                {%endif%}
+    {% endfor %}
+<br><br>
+    <h1 style="color: black;">Available HOTEL </h1>
+    {% for pro in product %}
+    {% if pro.category == "HOTEL"%}
+                <img style="height: 200px; width: 150px;" src="{{ pro.image.url }}" alt="">
+                <h6>{{pro}}</h6> 
+                <h1 style="color: black; ">{{pro.category}}</h1>
+                {%endif%}
+    {% endfor %}
+
+
+    <br><br>
+    <h1 style="color: black;">Available HILLS </h1>
+    {% for pro in product %}
+    {% if pro.category == "HILLS"%}
+                <img style="height: 200px; width: 150px;" src="{{ pro.image.url }}" alt="">
+                <h6>{{pro}}</h6> 
+                <h1 style="color: black; ">{{pro.category}}</h1>
+                {%endif%}
+    {% endfor %}    
+
+</div>
+</div>
+
+<!-- endproduct -->
+        <!-- Vendor Start -->
+        <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="container py-5 mb-5">
+                <div class="bg-white">
+                    <div class="owl-carousel vendor-carousel">
+                        <img src="{% static 'users/images/EAC/eaclogo.png'%}" alt="">
+                        <img src="/img/images/ihameLogo.png" alt="">
+                        <img src="/img/images/EAC/eaclogo.png" alt="">
+                        <img src="/img/images/EAC/South Sudan/southSudanLogo.jfif" alt="">
+                        <img src="/img/images/EAC/Tanzania/talogo.jfif" alt="">
+                        <img src="/img/images/EAC/UgandaPic/logoUganda.svg.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
+{% endblock content %}
